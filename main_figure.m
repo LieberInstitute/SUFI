@@ -1,4 +1,15 @@
 function main_figure(unmixed, M0, lambda, channel, filename)
+% Function to generate and save figures
+% -------------------------------------------------------------------------
+% Inputs: unmixed - 6D stack of unmixed image
+%         M0 - extracted fingerprints
+%         lambda - array of lambda (wavelength) values of multiplex lambda stack
+%		  channel - cell array of channel names
+% 		  filename - path to multiplex lambda stack
+%
+% Copyright (2020) Lieber Institute for Brain Development, Baltimore MD
+
+
     [fPath, fName, ~] = fileparts(filename);
     [~, maxdim] = max(M0);
     maxL = lambda(maxdim);
