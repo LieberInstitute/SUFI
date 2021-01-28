@@ -1,7 +1,0 @@
-channel,file
-DAPILp3,example_data/67_DAPI_Fingerprint_405laser1.czi
-Opal520_Lp20,example_data/69_Opal520_Fingerprint_488laser20.0.czi
-Opal570Lp1.0,example_data/68_Opal570_Fingerprint_561laser1.0.czi
-Opal620_LP10,example_data/70_Opal620_Fingerprint_561laser10.czi
-Opal690_Lp30,example_data/71_Opal690_Fingerprint_633laser30.czi
-Lipofuscin,example_data/No103_LipofuscinOnly_63x_SingleZ.czi

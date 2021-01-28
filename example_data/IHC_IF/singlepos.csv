@@ -1,0 +1,6 @@
+channel,file
+Abeta,example_data/IHC_IF/Abeta_Fingerprint.czi
+pTau,example_data/IHC_IF/pTau_Fingerprint.czi
+MAP2,example_data/IHC_IF/MAP2_Fingerprint.czi
+DAPI,example_data/IHC_IF/DAPI_AbetapTauMAP2.czi
+Lipofuscin,example_data/IHC_IF/Lipofuscin_AbetapTauMAP2.czi
