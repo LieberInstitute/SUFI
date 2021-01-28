@@ -6,12 +6,38 @@ close   all
 rng(5,'twister')
 
 %% Load toolbox and data
-toolbox = 'toolbox'; % path to toolbox
+toolbox = 'toolbox';
 addpath(genpath(toolbox))
 
-filename = 'example_data/BR1531_63X_MBP520_SLC17A7570_GAD1620_SNAP25690_3.czi'; % path to multiplex lambda stack that needs to be unmixed
-channel = {'DAPI', 'Opal520_Lp20', 'Opal570_Lp10', 'Opal620_Lp10', 'Opal690_Lp30', 'Lipofuscin'}; % channels present in the multiplex lambda stack
-singlepos = 'example_data/singlepos.csv'; % csv file with channel name and corresponding single positive .czi files - see readme for example
+% Choose one data set. Remove %{ & %} to uncomment one dataset of interest.
+
+% 1. smFISH mouse tissue
+%{
+filename = 'example_data/smFISH_mouse/Mousepract_LC_Gal520_Th570_Bdnf620_NPY690_10X_2.czi'; % path to multiplex lambda stack that needs to be unmixed
+channel = {'DAPI', 'Opal520', 'Opal570', 'Opal620', 'Opal690'}; % channels present in the multiplex lambda stack
+singlepos = 'example_data/smFISH_mouse/singlepos.csv'; % csv file with channel name and corresponding single positive .czi files - see readme for example
+%}
+
+% 2. smFISH mouse cell culture
+%{
+filename = 'example_data/smFISH_mouseCC/MsCC_07012019_RNAscope4plexV2_3_Fos_C4_Opal520_Bdnfe1_C2_Opal570_Bdnfe4_C3_Opal620_Arc_C1_Opal690_KCl.czi'; % path to multiplex lambda stack that needs to be unmixed
+channel = {'DAPI', 'Opal520', 'Opal570', 'Opal620', 'Opal690'}; % channels present in the multiplex lambda stack
+singlepos = 'example_data/smFISH_mouseCC/singlepos.csv'; % csv file with channel name and corresponding single positive .czi files - see readme for example
+%}
+
+% 3. smFISH human tissue
+%{
+filename = 'example_data/smFISH_human/BR1531_63X_MBP520_SLC17A7570_GAD1620_SNAP25690_3.czi'; % path to multiplex lambda stack that needs to be unmixed
+channel = {'DAPI', 'Opal520', 'Opal570', 'Opal620', 'Opal690', 'Lipofuscin'}; % channels present in the multiplex lambda stack
+singlepos = 'example_data/smFISH_human/singlepos.csv'; % csv file with channel name and corresponding single positive .czi files - see readme for example
+%}
+
+% 4. smFISH IHC_IF
+%{
+filename = 'example_data/IHC_IF/AD_40X_MAP2.czi'; % path to multiplex lambda stack that needs to be unmixed
+channel = {'Abeta', 'pTau', 'MAP2', 'DAPI', 'Lipofuscin'}; % channels present in the multiplex lambda stack
+singlepos = 'example_data/IHC_IF/singlepos.csv'; % csv file with channel name and corresponding single positive .czi files - see readme for example
+%}
 
 % Initialize pool to use multiple processor cores on the computer
 npool = feature('numcores');
