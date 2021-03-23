@@ -77,7 +77,7 @@ if(size(singlepos,1))
     end
     M0(:, end+1) = mean(noise, 2);
 else
-    P_vca = C; % num channels plus noise
+    P_vca = nlambda + 1; % num channels plus noise
     img = squeeze(image6d(:,:,round(Z/2),:,:,:));
     r_cube = permute(img, [2, 3, 1]);
     [m,n,L] = size(r_cube);
